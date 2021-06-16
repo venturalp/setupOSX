@@ -126,11 +126,9 @@ alias projects="~/Projetos"
 alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias cls="clear"	
 alias gits="git status -s"
-alias connectVPN='/opt/forticlient-sslvpn/64bit/forticlientsslvpn_cli --server dasavpn2.dasa.com.br:443 --vpnuser f36399053854'
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 alias ngrok="~/ngrok"
-alias gitdasa="git config  user.name \"Guilherme Ventura de Souza\" && git config user.email guilherme.ventura@dasa.com.br"
 alias gitventura="git config user.name \"Guilherme Ventura de Souza\" && git config user.email venturalp@gmail.com"
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
