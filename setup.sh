@@ -21,6 +21,7 @@ BREW_PREFIX=$(brew --prefix)
 #Tools
 brew install node
 brew install nvm
+brew install svn
 mkdir ~/.nvm
 brew install yarn
 brew install git
@@ -49,12 +50,6 @@ brew install --cask spectacle
 # Remove outdated versions from the cellar.
 brew cleanup
 
-
-# Setup Terminal - Oh My Zsh
-brew install zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-sudo usermod --shell $(which zsh) $USER
-
 # Fonts
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
@@ -64,6 +59,7 @@ brew install --cask font-fira-mono-nerd-font
 brew install --cask font-hack-nerd-font
 brew install --cask font-menlo-for-powerline
 brew install --cask font-meslo-for-powerline
+brew install --cask font-source-code-pro
 # powerlevel10k
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 # Plugins
@@ -72,7 +68,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
+# Setup Terminal - Oh My Zsh
+brew install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # Download and config ZSHRC
 curl -o ~/.zshrc $1
 sed -i '' 's/%USERNAME%/'$(whoami)'/g' ~/.zshrc
 source ~/.zshrc
+sudo usermod --shell $(which zsh) $USER
