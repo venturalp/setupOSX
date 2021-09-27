@@ -26,6 +26,9 @@ mkdir ~/.nvm
 brew install yarn
 brew install git
 
+#Taps
+brew tap popcorn-official/popcorn-desktop https://github.com/popcorn-official/popcorn-desktop.git
+
 #Apps
 brew install --cask firefox
 brew install --cask google-chrome
@@ -46,6 +49,8 @@ brew install --cask microsoft-edge
 brew install --cask steam
 brew install --cask epic-games
 brew install --cask spectacle
+brew install --cask popcorn-time
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
